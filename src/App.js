@@ -1,56 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Grid, Paper } from "@material-ui/core";
+import { Menu } from './features/menu/Menu';
+import { Header } from './features/header/Header';
+import { WeatherNow } from './features/weatherNow/WeatherNow';
+import { WeatherLong } from './features/weatherLong/WeatherLong';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <BrowserRouter>
+        <Menu />
+        <Paper elevation={3} className="Weather">
+          <Grid container> 
+            <Header />           
+            <Switch>
+              <Route exact path="/now" component={WeatherNow} />
+              <Route exact path="/long" component={WeatherLong} />
+              <Route path="/">
+                Welcome in the weather App, open menu to see more options or search for weather.
+              </Route>
+            </Switch> 
+          </Grid>
+        </Paper>
+      </BrowserRouter>
     </div>
   );
 }

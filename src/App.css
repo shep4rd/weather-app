@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  padding: 0px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  padding-top: 1rem;
 }
 
 .App-logo {
@@ -11,15 +18,6 @@
   .App-logo {
     animation: App-logo-float infinite 3s ease-in-out;
   }
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
 .App-link {
@@ -36,4 +34,20 @@
   100% {
     transform: translateY(0px)
   }
+}
+
+.Section {
+  padding-bottom: 2rem;
+}
+
+.Weather {
+  text-align: left;
+  width: 100%;
+  height: calc(100vh - 150px);
+  padding: 20px 10px;
+  margin: 20px 20px;
+  max-width: 400px;
+  max-height: 800px;
+  background-color: #ffffff33 !important;
+  color: rgba(255, 255, 255, 0.87) !important;
 }

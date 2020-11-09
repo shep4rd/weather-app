@@ -5,6 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(rgba(67, 101, 162, 0.8), rgba(206, 172, 167, 0.8)),
+    url('wapp-background.png');
+  background-repeat: no-repeat,
+    no-repeat;
+  background-position: bottom right,
+    center;
+  background-size: contain,
+    cover;
+  overflow: hidden;
 }
 
 code {

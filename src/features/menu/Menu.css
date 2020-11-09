@@ -1,0 +1,33 @@
+.Root {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff33 !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.Input {
+  margin-left: 8px;
+  flex: 1;
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.SearchButton {
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.MenuButton {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.Drawer {
+  width: 250px;
+  /* flex-shrink: 0, */
+}
+
+.DrawerPaper {
+  width: 250px;
+}
